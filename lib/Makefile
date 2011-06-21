@@ -13,14 +13,14 @@ all:
 	ocamlfind ocamlc -package type-conv -c -pp "$(CAMLP4ORF)" -annot -g -I +camlp4 pa_json_tc.ml
 
 install: META
-	ocamlfind install json-tc META pa_json_tc.cmi pa_json_tc.cmo
+	ocamlfind install json-tc-js META pa_json_tc.cmi pa_json_tc.cmo
 
 META: META.template Makefile
 	echo 'version = "$(VERSION)"' > META
 	cat META.template >> META
 
 uninstall:
-	ocamlfind remove json-tc
+	ocamlfind remove json-tc-js
 
 clean:
 	rm -f *.ppo *.ppr *.cmo *.cmi *.o *.cmx *.ast *~ *.auto *.annot META

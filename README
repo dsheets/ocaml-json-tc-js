@@ -1,4 +1,4 @@
-                          json-tc
+                          json-tc-js
 
 Introduction
 ============
@@ -23,7 +23,7 @@ signature:
   val point_of_json : Json_type.t -> point
 
 Json_type.t is the type of parsed JSON data, which is provided by
-the json-wheel library.
+the jsonoj (nee json-wheel) library.
 
 Function json_of_point would convert an OCaml object of type point
 into a JSON object. point_of_json works the other way around, and
